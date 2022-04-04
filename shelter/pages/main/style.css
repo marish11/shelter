@@ -147,11 +147,11 @@ h1 {
   color: #FFFFFF;
 }
 
-.not-only-title {
+.line-break {
   display: block;
 }
 
-.not-only-block p {
+.section-text {
   margin: 0;
   padding-bottom: 42px;
   font-family: 'Arial';
@@ -188,4 +188,40 @@ h1 {
   letter-spacing: 0.06em;
   color: #292929;
   text-decoration: none;
+}
+
+.about-section {
+  margin-top: -4.391px;
+  background: #FFFFFF;
+  height: 20px;
+}
+
+.about-container {
+  padding:80px 0 100px 0;
+  display: flex;
+}
+
+.about-image {
+  padding-left: 175px;
+}
+
+.about-block {
+  padding: 14px 0 0 120px;
+  width: 35.83%;
+}
+
+.section-title {
+  margin: 0;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.dark {
+  padding: 25px 0 0 0;
+  color:#4C4C4C;
 }
