@@ -173,6 +173,7 @@ h1 {
 
 .make-friend-button:hover {
   background-color: #FDDCC4;
+  transition: 0.5s ease;
 }
 
 .not-only-image {
@@ -193,11 +194,10 @@ h1 {
 .about-section {
   margin-top: -4.391px;
   background: #FFFFFF;
-  height: 20px;
 }
 
 .about-container {
-  padding:80px 0 100px 0;
+  padding: 80px 0 100px 0;
   display: flex;
 }
 
@@ -224,4 +224,139 @@ h1 {
 .dark {
   padding: 25px 0 0 0;
   color:#4C4C4C;
+}
+
+.our-friends-section {
+  margin-top: -4.391px;
+  padding: 80px 0 100px;
+  background: #F6F6F6;
+}
+
+.centered {
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.slider-container {
+  display: flex;
+  max-width: 1200px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 90px;
+}
+
+.pet-card {
+  background: #FAFAFA;
+  border-radius: 9px;
+}
+
+.pet-card:hover {
+  background: #FFFFFF;
+  transition: 0.5s ease;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  cursor: pointer;
+}
+
+.pet-card:hover .learn-more-button {
+  background-color: #FDDCC4;
+  transition: 0.5s ease;
+  border: none;
+}
+
+.pet-card img {
+  padding-bottom: 27px;
+}
+
+h4 {
+  margin: 0;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1em;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+
+.learn-more-button {
+  margin: 31.5px 41.5px 30px;
+  width: 187px;
+  height: 52px;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #292929;
+  background-color: transparent;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.learn-more-button:hover {
+  background-color: #FDDCC4;
+  transition: 0.5s ease;
+  border: none;
+}
+
+.rest-button {
+  margin: 60px 470px 0;
+  width: 260px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1CDB3;
+  border-radius: 100px;
+}
+
+.rest-button a {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #292929;
+  text-decoration: none;
+}
+
+.rest-button:hover {
+  background-color: #FDDCC4;
+  transition: 0.5s ease;
+}
+
+.prev,
+.next {
+  margin-top: 192px;
+  width: 52px;
+  height: 52px;
+  background-color: transparent;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #FDDCC4;
+  transition: 0.5s ease;
+  border: none;
+}
+
+.prev {
+  margin-right: 53px;
+  background: url(../../assets/icons/arrow-prev.svg) no-repeat;
+  background-position: 50%;
+}
+.next {
+  margin-left: 53px;
+  background: url(../../assets/icons/arrow-next.svg) no-repeat;
+  background-position: 50%;
 }
