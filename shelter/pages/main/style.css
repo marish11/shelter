@@ -429,3 +429,64 @@ h4 {
 .bottom-row {
   padding-left: 84px;
 }
+
+.in-addition-section {
+  margin-top: 3px;
+  background: #F6F6F6;
+}
+
+.in-addition-container {
+  padding: 80px 143px 100px;
+  display: flex;
+}
+
+.in-addition-image {
+  padding: 11px 30px 0 0;
+}
+
+h5 {
+  margin: 0;
+  padding: 20px 0;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.account-button {
+  display: flex;
+  width: 349px;
+  height: 43px;
+  align-items: center;
+  border-radius: 9px;
+  background: url(../../assets/icons/credit-card.svg) no-repeat;
+  background-position: 5%;
+  background-color: #F1CDB3;
+}
+
+.account-button:hover {
+  background-color: #FDDCC4;
+  transition: 0.5s ease;
+}
+
+.account-button a {
+  text-decoration: none;
+}
+
+.account-button h4 {
+  padding-left: 60px;
+}
+
+.in-addition-block p {
+  margin: 0;
+  padding-top: 20px;
+  font-family: 'Arial';
+  font-style: italic;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #B2B2B2;
+}
