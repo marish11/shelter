@@ -490,3 +490,73 @@ h5 {
   font-weight: 400;
   color: #B2B2B2;
 }
+
+footer {
+  background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+}
+
+.contacts-container {
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 13.33%;
+}
+
+.contacts-block h3 {
+  padding: 16px 0 40px;
+  color: #FFFFFF;
+}
+
+.contacts-item a {
+  text-decoration: none;
+  color: #F1CDB3;
+}
+
+.email-item {
+  background: url(../../assets/icons/icon-email.svg) no-repeat;
+}
+
+.phone-item {
+  background: url(../../assets/icons/icon-phone.svg) no-repeat;
+}
+
+.contacts-item {
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+
+.email-item h4,
+.phone-item h4 {
+  padding-left: 60px;
+}
+
+.email-item {
+  padding-bottom: 40px;
+}
+
+.first-item,
+.second-item {
+  background: url(../../assets/icons/icon-marker.png) no-repeat;
+}
+
+.first-item h4,
+.second-item h4 {
+  padding-left: 42px;
+}
+
+.first-item {
+  padding-bottom: 40px;
+}
+
+.first-item h4 {
+  text-align: start;
+}
+
+.first-item .line-break {
+  padding-top: 3px;
+}
+
+.image-block {
+  margin-left: 7.5px;
+}
