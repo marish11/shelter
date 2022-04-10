@@ -38,14 +38,17 @@ body {
   padding: 0 40px 0 40px;
 }
 
-.header-container {
+header {
   position: sticky;
   top: 0;
+  background: #FFFFFF;
+}
+
+.header-container {
   padding: 30px 0;
   display: flex;
   justify-content: space-between;
   height: 60px;
-  background: #FFFFFF;
 }
 
 h1 {
