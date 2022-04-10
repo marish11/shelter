@@ -320,12 +320,16 @@ footer {
   color: #F1CDB3;
 }
 
-.email-item {
+.email-icon {
   background: url(../../assets/icons/icon-email.svg) no-repeat;
+  width: 40px;
+  height: 32px;
 }
 
-.phone-item {
+.phone-icon {
   background: url(../../assets/icons/icon-phone.svg) no-repeat;
+  width: 40px;
+  height: 32px;
 }
 
 .contacts-item {
@@ -336,21 +340,22 @@ footer {
 
 .email-item h4,
 .phone-item h4 {
-  padding-left: 60px;
+  padding-left: 20px;
 }
 
 .email-item {
   padding-bottom: 40px;
 }
 
-.first-item,
-.second-item {
-  background: url(../../assets/icons/icon-marker.png) no-repeat;
+.location-icon {
+  background: url(../../assets/icons/icon-marker.svg) no-repeat;
+  width: 22px;
+  height: 32px;
 }
 
 .first-item h4,
 .second-item h4 {
-  padding-left: 42px;
+  padding-left: 20px;
 }
 
 .first-item {
