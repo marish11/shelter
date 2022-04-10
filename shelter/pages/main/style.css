@@ -238,6 +238,7 @@ h1 {
 }
 
 .slider-container {
+  margin: auto;
   display: flex;
   max-width: 1200px;
 }
