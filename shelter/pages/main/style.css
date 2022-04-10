@@ -110,7 +110,7 @@ h1 {
 }
 
 .nav-container a:not(.item-underlined):hover {
-  color: #FDDCC4;
+  color: #FAFAFA;
   transition: 0.5s ease;
 }
 
