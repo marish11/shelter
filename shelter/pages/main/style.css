@@ -77,6 +77,10 @@ h1 {
   color: #FFFFFF;
 }
 
+.logo-block a {
+  text-decoration: none;
+}
+
 .nav-container {
   flex-grow: 1;
   display: flex;
