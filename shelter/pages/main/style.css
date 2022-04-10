@@ -475,6 +475,7 @@ h5 {
 
 .account-button a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .account-button h4 {
