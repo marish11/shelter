@@ -306,7 +306,7 @@ h4 {
 }
 
 .rest-button {
-  margin: 60px 470px 0;
+  margin: 60px auto 0;
   width: 260px;
   height: 52px;
   display: flex;
