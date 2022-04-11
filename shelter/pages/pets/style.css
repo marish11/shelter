@@ -53,6 +53,7 @@ header {
 
 h1 {
   margin: 0 0;
+  padding-top: 1px;
   font-family: 'Georgia';
   font-size: 32px;
   line-height: 35px;
@@ -312,7 +313,7 @@ footer {
 }
 
 .contacts-block h3 {
-  padding: 16px 0 40px;
+  padding: 17px 0 39px;
   color: #FFFFFF;
 }
 
@@ -357,6 +358,7 @@ footer {
 .first-item h4,
 .second-item h4 {
   padding-left: 20px;
+  padding-top: 1px;
 }
 
 .first-item {
