@@ -244,6 +244,7 @@ h1 {
 .slider-container {
   margin: auto;
   display: flex;
+  justify-content: center;
   max-width: 1200px;
 }
 
@@ -576,7 +577,6 @@ footer {
 
 @media (max-width: 1279px) {
   .container {
-    max-width: 708px;
     padding: 0 30px 0 30px;
   }
 
@@ -584,16 +584,12 @@ footer {
     padding-top: 30px;
   }
 
-  h1 {
-    padding-top: 2px;
-  }
-
   .not-only-container {
     flex-direction: column;
-    align-items: center;
   }
   
   .not-only-block {
+    margin: 0 auto;
     padding-top: 150px;
   }
   
@@ -602,6 +598,7 @@ footer {
   }
   
   .not-only-image {
+    margin: auto;
     padding: 100px 0 0 139px;
   }
   
@@ -615,7 +612,9 @@ footer {
   }
   
   .about-block {
-    padding: 0 139px 80px 139px;
+    margin: 0 auto;
+    padding: 0 0 80px;
+    max-width: 430px;
   }
   
   .cards-container {
@@ -625,13 +624,17 @@ footer {
   .cards-container div:last-child {
     display: none;
   }
+
+  .slider-container {
+    column-gap: 1.69%;
+  }
   
   .prev {
-    margin-right: 12px;
+    margin-right: 0;
   }
 
   .next {
-    margin-left: 12px;
+    margin-left: 0;
   }
   
   .options-container {
@@ -640,7 +643,7 @@ footer {
   }
 
   .options-element {
-    width: 170px;
+    width: 26.98%;
   }
   
   .bottom-row {
@@ -654,20 +657,28 @@ footer {
   }
 
   .in-addition-block {
-    padding: 0 164px 0 164px;
+    margin: 0 auto;
+    max-width: 380px;
   }
   
   .in-addition-image {
     padding: 60px 0 0;
   }
+
+  .account-button a h4 {
+    line-height: 23px;
+  }
   
   .contacts-container {
-    margin-top: -4.391px;
-    padding: 30px 34px 0 34px;
+    margin: -4.391px auto 0;
+    padding: 31px 0 0;
+    max-width: 708px;
+    justify-content: center;
     column-gap: 9.38%;
   }
 
   .contacts-block {
+    margin-left: -7px;
     padding-bottom: 65px;
   }
   
