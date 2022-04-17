@@ -384,3 +384,46 @@ footer {
 .image-block {
   font-size: 0;
 }
+
+@media (max-width: 1279px) {
+  .container {
+    padding: 0 30px 0 30px;
+  }
+
+  .our-friends-section {
+    padding: 80px 0 76px;
+  }
+
+  .centered {
+    padding-bottom: 30px;
+  }
+  
+  .cards-container {
+    margin: 0 auto;
+    padding-bottom: 40px;
+    max-width: 708px;
+    column-gap: 40px;
+  }
+
+  .cards-container div:nth-last-child(-n+2) {
+    display: none;
+  }
+  
+  .contacts-container {
+    margin: 0 auto;
+    padding: 31px 34px 0;
+    max-width: 708px;
+  }
+
+  .contacts-block {
+    padding-bottom: 65px;
+  }
+  
+  .contacts-block h3 {
+    padding: 0 0 39px;
+  }
+
+  .image-block {
+    margin: 0 auto;
+  }
+}
