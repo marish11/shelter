@@ -823,7 +823,7 @@ footer {
     margin: 0 auto;
     padding: 0 5px 0 5px;
     max-width: 300px;
-    column-gap: 30px;
+    column-gap: 10.34%;
     row-gap: 30px;
   }
 
