@@ -82,6 +82,10 @@ h1:hover {
   transition: 0.5s ease;
 }
 
+.burger-menu {
+  display: none;
+}
+
 .nav-container {
   flex-grow: 1;
   display: flex;
@@ -309,7 +313,15 @@ footer {
   padding-top: 40px;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 13.33%;
+  justify-content: space-between;
+}
+
+.contacts-block {
+  max-width: 280px;
+}
+
+.location-block {
+  max-width: 302px;
 }
 
 .contacts-block h3 {
@@ -374,5 +386,146 @@ footer {
 }
 
 .image-block {
-  margin-left: 7.5px;
+  font-size: 0;
+}
+
+@media (max-width: 1279px) {
+  .container {
+    padding: 0 30px 0 30px;
+  }
+
+  .our-friends-section {
+    padding: 80px 0 76px;
+  }
+
+  .centered {
+    padding-bottom: 30px;
+  }
+  
+  .cards-container {
+    margin: 0 auto;
+    padding-bottom: 40px;
+    max-width: 708px;
+    column-gap: 40px;
+  }
+
+  .cards-container div:nth-last-child(-n+2) {
+    display: none;
+  }
+  
+  .contacts-container {
+    margin: 0 auto;
+    padding: 31px 34px 0;
+    max-width: 708px;
+  }
+
+  .contacts-block {
+    padding-bottom: 65px;
+  }
+  
+  .contacts-block h3 {
+    padding: 0 0 39px;
+  }
+
+  .image-block {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 10px 0 10px;
+  }
+
+  .nav-container {
+    display: none;
+  }
+
+  .header-container {
+    padding-right: 43px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .burger-menu span {
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: 8px 0;
+    width: 30px;
+    height: 2px;
+    background-color: #000000;
+  }
+
+  .our-friends-section {
+    padding: 42px 0 42px;
+  }
+
+  .section-title {
+    font-size: 25px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .centered {
+    padding-bottom: 42px;
+  }
+
+  .cards-container {
+    padding-bottom: 42px;
+    max-width: 300px;
+    column-gap: 40px;
+  }
+
+  .cards-container div:nth-child(n+4) {
+    display: none;
+  }
+
+  .pagination-container {
+    max-width: 300px;
+  }
+
+  .central-item {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .pagination-items :nth-child(-n+4) {
+    margin-right: 10px;
+  }
+
+  .contacts-container {
+    padding: 30px 0 0 0;
+    max-width: 300px;
+    align-items: center;
+  }
+
+  .contacts-block {
+    margin: 0 auto;
+    padding-bottom: 40px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .location-block {
+    align-items: start;
+  }
+
+  .location-block h3 {
+    max-width: 270px;
+    padding: 0 15px 40px;
+  }
+
+  .first-item {
+    height: 46px;
+  }
 }
