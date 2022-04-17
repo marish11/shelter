@@ -645,7 +645,9 @@ footer {
   }
   
   .options-container {
+    margin: 0 auto;
     padding: 0 39px 0 39px;
+    max-width: 630px;
     column-gap: 9.52%;
   }
 
@@ -705,6 +707,7 @@ footer {
   }
 
   .not-only-block {
+    max-width: 300px;
     text-align: center;
   }
 
@@ -790,7 +793,9 @@ footer {
   }
 
   .options-container {
+    margin: 0 auto;
     padding: 0 5px 0 5px;
+    max-width: 300px;
     column-gap: 30px;
     row-gap: 30px;
   }
@@ -844,6 +849,7 @@ footer {
 
   .contacts-container {
     padding: 30px 0 0 0;
+    max-width: 300px;
     align-items: center;
   }
 
