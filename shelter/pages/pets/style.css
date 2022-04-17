@@ -427,3 +427,78 @@ footer {
     margin: 0 auto;
   }
 }
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 10px 0 10px;
+  }
+
+  .nav-container {
+    display: none;
+  }
+
+  .our-friends-section {
+    padding: 42px 0 42px;
+  }
+
+  .section-title {
+    font-size: 25px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .centered {
+    padding-bottom: 42px;
+  }
+
+  .cards-container {
+    padding-bottom: 42px;
+    max-width: 300px;
+    column-gap: 40px;
+  }
+
+  .cards-container div:nth-child(n+4) {
+    display: none;
+  }
+
+  .pagination-container {
+    max-width: 300px;
+  }
+
+  .central-item {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .pagination-items :nth-child(-n+4) {
+    margin-right: 10px;
+  }
+
+  .contacts-container {
+    padding: 30px 0 0 0;
+    max-width: 300px;
+    align-items: center;
+  }
+
+  .contacts-block {
+    margin: 0 auto;
+    padding-bottom: 40px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .location-block {
+    align-items: start;
+  }
+
+  .location-block h3 {
+    max-width: 270px;
+    padding: 0 15px 40px;
+  }
+
+  .first-item {
+    height: 46px;
+  }
+}
