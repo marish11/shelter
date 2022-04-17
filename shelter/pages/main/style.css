@@ -863,6 +863,7 @@ footer {
   .account-button {
     margin: 0 auto;
     width: 281px;
+    background-position: 5.7%;
   }
 
   .account-button a h4 {
