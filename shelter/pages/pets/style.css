@@ -309,7 +309,15 @@ footer {
   padding-top: 40px;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 13.33%;
+  justify-content: space-between;
+}
+
+.contacts-block {
+  max-width: 280px;
+}
+
+.location-block {
+  max-width: 302px;
 }
 
 .contacts-block h3 {
@@ -374,5 +382,5 @@ footer {
 }
 
 .image-block {
-  margin-left: 7.5px;
+  font-size: 0;
 }
