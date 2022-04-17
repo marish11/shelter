@@ -82,6 +82,10 @@ h1 {
   text-decoration: none;
 }
 
+.burger-menu {
+  display: none;
+}
+
 .nav-container {
   flex-grow: 1;
   display: flex;
@@ -704,6 +708,29 @@ footer {
 
   .nav-container {
     display: none;
+  }
+
+  .header-container {
+    padding-right: 43px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .burger-menu span {
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: 8px 0;
+    width: 30px;
+    height: 2px;
+    background-color: #F1CDB3;
   }
 
   .not-only-block {
