@@ -44,7 +44,6 @@ body {
 
 header {
   position: absolute;
-  z-index: 1;
   left: 0;
   right: 0;
 }
@@ -111,7 +110,6 @@ h1 {
   padding-bottom: 3px;
   position: relative;
   display: block;
-  transition: .3s;
 }
 
 .nav-container .item-underlined {
@@ -131,6 +129,10 @@ h1 {
   right: -1px;
   height: 3px;
   background-color: #F1CDB3;
+}
+
+.nav-container .logo-block {
+  display: none;
 }
 
 .not-only-section {
@@ -706,10 +708,6 @@ footer {
     padding: 0 10px 0 10px;
   }
 
-  .nav-container {
-    display: none;
-  }
-
   .header-container {
     padding-right: 43px;
   }
@@ -719,8 +717,80 @@ footer {
     align-items: center;
   }
 
+  .nav-container {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: -100%;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s ease;
+    margin: 0;
+    padding: 0;
+    width: 320px;
+    height: 100vh;
+    gap: 40px;
+    background-color: #292929;
+  }
+
+  .nav-container.open {
+    right: 0;
+    transition: 0.5s ease;
+  }
+
+  .nav-container li:nth-child(1) {
+    margin-bottom: 40px;
+  }
+
+  .nav-container li a {
+    margin-right: 36px;
+    padding-left: 36px;
+    font-size: 32px;
+    line-height: 51px;
+  }
+
+  .nav-container .logo-block {
+    position: absolute;
+    display: block;
+    top: 30px;
+    left: 10px;
+  }
+
+  .logo-block .logo-title {
+    margin: 0 0;
+    padding-top: 1px;
+    padding-left: 0;
+    font-family: 'Georgia';
+    font-size: 32px;
+    line-height: 35px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+  }
+
+  .nav-container .logo-block a {
+    padding-left: 0;
+  }
+
+  .active {
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s ease;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(41, 41, 41, 0.6);
+  }
+
   .burger-menu {
     display: block;
+    z-index: 3;
+    transition: 0.5s;
+  }
+
+  .burger-menu.open {
+    transform: rotate(90deg);
+    transition: 0.5s;
   }
 
   .burger-menu span {
