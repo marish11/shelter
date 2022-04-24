@@ -248,16 +248,49 @@ h1 {
 }
 
 .slider-container {
-  margin: auto;
   display: flex;
-  justify-content: center;
-  max-width: 1200px;
 }
 
 .cards-container {
+  margin: auto;
+  max-width: 990px;
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  left: -1080px;
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 90px;
+  gap: 90px;
+}
+
+.item {
+  display: flex;
+  gap: 90px;
+}
+
+@keyframes move-right {
+  from {left: -1080px;}
+  to {left: -2160px;}
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 1s;
+}
+
+@keyframes move-left {
+  from {left: -1080px;}
+  to {left: 0;}
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 1s;
+}
+
+.hidden {
+  display: none;
 }
 
 .pet-card {
@@ -631,15 +664,30 @@ footer {
   }
   
   .cards-container {
-    column-gap: 40px;
+    max-width: 580px;
   }
 
-  .cards-container div:last-child {
+  .slider {
+    left: -620px;
+    gap: 40px;
+  }
+  
+  .item {
+    gap: 40px;
+  }
+  
+  @keyframes move-right {
+    from {left: -620px;}
+    to {left: -1240px;}
+  }
+  
+  @keyframes move-left {
+    from {left: -620px;}
+    to {left: 0;}
+  }
+
+  .item .card:last-child {
     display: none;
-  }
-
-  .slider-container {
-    column-gap: 1.69%;
   }
   
   .prev {
@@ -854,12 +902,31 @@ footer {
     padding-bottom: 42px;
   }
 
-  .cards-container div:nth-child(2) {
+  .cards-container {
+    max-width: 270px;
+  }
+
+  .slider {
+    left: -310px;
+  }
+  
+  @keyframes move-right {
+    from {left: -310px;}
+    to {left: -620px;}
+  }
+  
+  @keyframes move-left {
+    from {left: -310px;}
+    to {left: 0;}
+  }
+
+  .item .card:nth-child(n+2) {
     display: none;
   }
 
   .slider-container {
-    max-width: 300px;
+    margin: auto;
+    max-width: 270px;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 20px;
@@ -872,6 +939,10 @@ footer {
   .prev,
   .next {
     margin-top: 0;
+  }
+
+  .next {
+    margin-left: 14px;
   }
 
   .rest-button {
