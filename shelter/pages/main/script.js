@@ -10,6 +10,11 @@ const btnNext = document.querySelector('.next');
 const itemPrev = document.querySelector('#item-prev');
 const itemNext = document.querySelector('#item-next');
 const slider = document.querySelector('.slider');
+const modal = document.querySelector('.modal');
+const cardsContainer = document.querySelector('.cards-container');
+const modalOverlay = document.querySelector('.modal-overlay');
+const closeBtn = document.querySelector('.modal-close-btn');
+const modalContent = document.querySelector('.modal-content');
 
 function toggleMenu() {
   burgerMenu.classList.toggle('open');
@@ -50,6 +55,8 @@ let j = 0;
 const createCard = () => {
   const card = document.createElement('div');
   card.className = 'pet-card';
+  card.setAttribute('data-pet', '');
+  card.dataset.pet = petsData[randomArr[j]].name;
   card.innerHTML = `
   <img src="${petsData[randomArr[j]].img}" alt="${petsData[randomArr[j]].name}" width="270" height="270">
   <h4>${petsData[randomArr[j]].name}</h4>
@@ -114,3 +121,73 @@ slider.addEventListener('animationend', (animationEvent) => {
   btnPrev.addEventListener('click', moveLeft);
   btnNext.addEventListener('click', moveRight);
 })
+
+const getPetData = (name) => {
+  for (let i = 0; i < petsData.length; i++) {
+    if (petsData[i].name === name) {
+      return petsData[i];
+    }
+  }
+}
+
+function openModal(e) {
+  if (e.target.closest('.pet-card')) {
+    const top = window.pageYOffset;
+    modal.style.top = top + 'px';
+    modal.classList.add('opened');
+    document.body.classList.add('active');
+    modalOverlay.classList.add('active');
+    const name = e.target.closest('.pet-card').dataset.pet;
+    const pet = getPetData(name);
+    modalContent.appendChild(createModal(pet));
+  }
+}
+
+function closeModal() {
+  document.body.classList.remove('modal-overlay');
+  modal.classList.remove('opened');
+  document.body.classList.remove('active');
+  modalContent.innerHTML = '';
+}
+
+const createModal = (pet) => {
+  const modalContent = document.createDocumentFragment();
+  const imgBlock = document.createElement('div');
+  imgBlock.classList.add('modal-content-img');
+  const img = document.createElement('img');
+  img.setAttribute('src', `${pet.img}`);
+  imgBlock.appendChild(img);
+  const petInfo = document.createElement('div');
+  petInfo.classList.add('modal-content-info');
+  const name = document.createElement('div');
+  name.classList.add('modal-content-name');
+  name.innerHTML = pet.name;
+  const type = document.createElement('div');
+  type.classList.add('modal-content-type');
+  type.innerHTML = `${pet.type} - ${pet.breed}`;
+  const description = document.createElement('div');
+  description.classList.add('modal-content-description');
+  description.innerHTML = pet.description;
+  const data = document.createElement('div');
+  data.classList.add('modal-content-data');
+  data.innerHTML = `
+  <ul>
+    <li><b>Age: </b>${pet.age}</li>
+    <li><b>Inoculations: </b>${[...pet.inoculations]}</li>
+    <li><b>Diseases: </b>${[...pet.diseases]}</li>
+    <li><b>Parasites: </b>${[...pet.parasites]}</li>
+  </ul>
+  `
+  petInfo.appendChild(name);
+  petInfo.appendChild(type);
+  petInfo.appendChild(description);
+  petInfo.appendChild(data);
+  modalContent.appendChild(imgBlock);
+  modalContent.appendChild(petInfo);
+
+  return modalContent;
+}
+
+cardsContainer.addEventListener('click', openModal);
+modalOverlay.addEventListener('click', closeModal);
+closeBtn.addEventListener('click', closeModal);
