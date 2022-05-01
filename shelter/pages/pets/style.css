@@ -41,6 +41,7 @@ body {
 header {
   position: sticky;
   top: 0;
+  z-index: 3;
   background: #FFFFFF;
 }
 
@@ -171,8 +172,20 @@ h1:hover {
 }
 
 .pet-card {
+  position: relative;
+  z-index: 2;
   background: #FAFAFA;
   border-radius: 9px;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .pet-card:hover {
@@ -239,31 +252,37 @@ h4 {
   list-style: none;
 }
 
-.pagination-items li {
+.to-first-page-button,
+.prev-button,
+.central-item,
+.next-button,
+.to-last-page-button {
   display: flex;
   align-items: center;
   float: left;
   width: 48px;
   height: 48px;
   background-color: transparent;
-  border: solid 2px #F1CDB3;
+  border: solid 2px #CDCDCD;
   border-radius: 100px;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .pagination-items .central-item {
+  display: flex;
+  justify-content: space-around;
   background-color: #F1CDB3;
+  border: solid 2px #F1CDB3;
   cursor: auto;
 }
 
-.pagination-items li[data-disabled] {
-  background-color: transparent;
-  border: solid 2px #CDCDCD;
-  cursor: auto;
+.button-active {
+  border: solid 2px #F1CDB3;
+  color: #292929;
+  cursor: pointer;
 }
 
-.pagination-items li:not([data-disabled], .central-item):hover {
+.button-active:hover {
   background-color: #FDDCC4;
   transition: 0.5s ease;
   border: solid 2px #FDDCC4;
@@ -290,8 +309,9 @@ h4 {
 }
 
 .to-last-page-button {
-  background: url(../../assets/icons/to-last-page.svg) no-repeat;
+  background: url(../../assets/icons/to-first-page.svg) no-repeat;
   background-position: 49% 53%;
+  transform: rotate(180deg);
 }
 
 .prev-button {
@@ -300,8 +320,9 @@ h4 {
 }
 
 .next-button {
-  background: url(../../assets/icons/next-button.svg) no-repeat;
+  background: url(../../assets/icons/prev-button.svg) no-repeat;
   background-position: 49% 53%;
+  transform: rotate(180deg);
 }
 
 footer {
@@ -584,10 +605,6 @@ body:hover .modal-container:not(:hover) .modal-close-btn {
     max-width: 708px;
     column-gap: 40px;
   }
-
-  .cards-container div:nth-last-child(-n+2) {
-    display: none;
-  }
   
   .contacts-container {
     margin: 0 auto;
@@ -754,10 +771,6 @@ body:hover .modal-container:not(:hover) .modal-close-btn {
     padding-bottom: 42px;
     max-width: 300px;
     column-gap: 40px;
-  }
-
-  .cards-container div:nth-child(n+4) {
-    display: none;
   }
 
   .pagination-container {
