@@ -172,8 +172,6 @@ h1:hover {
 }
 
 .pet-card {
-  position: relative;
-  z-index: 2;
   background: #FAFAFA;
   border-radius: 9px;
   animation: fadeIn 0.5s forwards;
@@ -719,7 +717,7 @@ body:hover .modal-container:not(:hover) .modal-close-btn {
   }
 
   .wrapper.active header {
-    position: relative;
+    position: static;
   }
 
   .active {
